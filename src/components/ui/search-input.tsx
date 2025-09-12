@@ -2,12 +2,29 @@ import * as React from "react";
 import { Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-export interface SearchInputProps extends React.InputHTMLAttributes<HTMLInputElement> {}
+export interface SearchInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  onSearch?: (query: string) => void;
+}
 
 const SearchInput = React.forwardRef<HTMLInputElement, SearchInputProps>(
-  ({ className, ...props }, ref) => {
+  ({ className, onSearch, ...props }, ref) => {
+    const [value, setValue] = React.useState(props.defaultValue || "");
+
+    const handleSubmit = (e: React.FormEvent) => {
+      e.preventDefault();
+      if (onSearch) {
+        onSearch(value as string);
+      }
+    };
+
+    const handleKeyDown = (e: React.KeyboardEvent) => {
+      if (e.key === 'Enter') {
+        handleSubmit(e);
+      }
+    };
+
     return (
-      <div className="relative">
+      <form onSubmit={handleSubmit} className="relative">
         <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
         <input
           className={cn(
@@ -15,9 +32,17 @@ const SearchInput = React.forwardRef<HTMLInputElement, SearchInputProps>(
             className
           )}
           ref={ref}
+          value={value}
+          onChange={(e) => {
+            setValue(e.target.value);
+            if (props.onChange) {
+              props.onChange(e);
+            }
+          }}
+          onKeyDown={handleKeyDown}
           {...props}
         />
-      </div>
+      </form>
     );
   }
 );
