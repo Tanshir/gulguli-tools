@@ -9,6 +9,11 @@ import CategoryPage from "./pages/CategoryPage";
 import SearchPage from "./pages/SearchPage";
 import BrowsePage from "./pages/BrowsePage";
 import TrendingPage from "./pages/TrendingPage";
+import ToolDetailPage from "./pages/ToolDetailPage";
+import SubmitToolPage from "./pages/SubmitToolPage";
+import RequestCategoryPage from "./pages/RequestCategoryPage";
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +31,11 @@ const App = () => (
           <Route path="/search" element={<SearchPage />} />
           <Route path="/browse" element={<BrowsePage />} />
           <Route path="/trending" element={<TrendingPage />} />
+          <Route path="/tool/:slug" element={<ToolDetailPage />} />
+          <Route path="/submit-tool" element={<SubmitToolPage />} />
+          <Route path="/request-category" element={<RequestCategoryPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -109,10 +109,16 @@ export function Header() {
             />
           </div>
 
-          {/* Submit Tool Button */}
-          <div className="hidden md:flex items-center space-x-4">
+          {/* Action Buttons */}
+          <div className="hidden md:flex items-center space-x-3">
+            <Button variant="ghost" size="sm" asChild>
+              <Link to="/about">About</Link>
+            </Button>
+            <Button variant="ghost" size="sm" asChild>
+              <Link to="/contact">Contact</Link>
+            </Button>
             <Button variant="outline" asChild>
-              <Link to="/submit">Submit Tool</Link>
+              <Link to="/submit-tool">Submit Tool</Link>
             </Button>
           </div>
 
@@ -150,6 +156,20 @@ export function Header() {
                 >
                   Browse All
                 </Link>
+                <Link
+                  to="/about"
+                  className="block px-3 py-2 text-sm font-medium rounded-md hover:bg-accent"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  About
+                </Link>
+                <Link
+                  to="/contact"
+                  className="block px-3 py-2 text-sm font-medium rounded-md hover:bg-accent"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Contact
+                </Link>
                 <div className="px-3 py-2">
                   <div className="text-sm font-medium text-muted-foreground mb-2">Categories</div>
                   <div className="grid grid-cols-2 gap-2">
@@ -168,7 +188,7 @@ export function Header() {
                 </div>
               </nav>
               <Button asChild className="w-full">
-                <Link to="/submit" onClick={() => setIsMenuOpen(false)}>
+                <Link to="/submit-tool" onClick={() => setIsMenuOpen(false)}>
                   Submit Tool
                 </Link>
               </Button>
