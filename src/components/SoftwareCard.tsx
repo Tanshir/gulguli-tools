@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Star, TrendingUp, Users, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface SoftwareCardProps {
   title: string;
@@ -13,7 +14,12 @@ interface SoftwareCardProps {
   trending?: boolean;
   featured?: boolean;
   logo?: string;
+  slug?: string;
 }
+
+const getSlugFromTitle = (title: string) => {
+  return title.toLowerCase().replace(/[&\s]+/g, '-').replace(/[^a-z0-9-]/g, '');
+};
 
 export function SoftwareCard({ 
   title, 
@@ -24,8 +30,10 @@ export function SoftwareCard({
   pricing, 
   trending, 
   featured,
-  logo 
+  logo,
+  slug
 }: SoftwareCardProps) {
+  const toolSlug = slug || getSlugFromTitle(title);
   const pricingColor = {
     free: "tech-green",
     freemium: "tech-orange", 
@@ -84,10 +92,12 @@ export function SoftwareCard({
           </Badge>
         </div>
 
-        <Button variant="ghost" className="w-full justify-between group-hover:bg-primary/10 transition-smooth">
-          View Details
-          <ExternalLink className="w-4 h-4" />
-        </Button>
+        <Link to={`/tool/${toolSlug}`}>
+          <Button variant="ghost" className="w-full justify-between group-hover:bg-primary/10 transition-smooth">
+            View Details
+            <ExternalLink className="w-4 h-4" />
+          </Button>
+        </Link>
       </CardContent>
     </Card>
   );

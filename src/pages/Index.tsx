@@ -79,7 +79,8 @@ const featuredSoftware = [
     reviewCount: 2847,
     pricing: "freemium" as const,
     featured: true,
-    trending: true
+    trending: true,
+    slug: "claude-ai"
   },
   {
     title: "Figma",
@@ -88,7 +89,8 @@ const featuredSoftware = [
     rating: 4.8,
     reviewCount: 5234,
     pricing: "freemium" as const,
-    featured: true
+    featured: true,
+    slug: "figma"
   },
   {
     title: "Ahrefs",
@@ -97,7 +99,8 @@ const featuredSoftware = [
     rating: 4.7,
     reviewCount: 3156,
     pricing: "paid" as const,
-    trending: true
+    trending: true,
+    slug: "ahrefs"
   },
   {
     title: "Notion",
@@ -106,7 +109,8 @@ const featuredSoftware = [
     rating: 4.6,
     reviewCount: 8932,
     pricing: "freemium" as const,
-    featured: true
+    featured: true,
+    slug: "notion"
   },
   {
     title: "Canva Pro",
@@ -114,7 +118,8 @@ const featuredSoftware = [
     category: "Design & Creative",
     rating: 4.5,
     reviewCount: 12456,
-    pricing: "freemium" as const
+    pricing: "freemium" as const,
+    slug: "canva-pro"
   },
   {
     title: "1Password",
@@ -122,7 +127,8 @@ const featuredSoftware = [
     category: "Security & Privacy",
     rating: 4.8,
     reviewCount: 1876,
-    pricing: "paid" as const
+    pricing: "paid" as const,
+    slug: "1password"
   }
 ];
 

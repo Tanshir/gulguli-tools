@@ -18,7 +18,7 @@ import {
   Apple
 } from "lucide-react";
 
-// Mock data - in real app this would come from API/database
+// Comprehensive tool data for all tools mentioned on homepage
 const toolData: Record<string, {
   id: string;
   title: string;
@@ -49,36 +49,109 @@ const toolData: Record<string, {
     reviewCount: 2847,
     pricing: "freemium",
     website: "https://claude.ai",
-    screenshots: [
-      "/api/placeholder/800/600",
-      "/api/placeholder/800/600",
-      "/api/placeholder/800/600"
-    ],
-    features: [
-      "Advanced text generation and analysis",
-      "Code writing and debugging",
-      "Document analysis and summarization",
-      "Creative writing assistance",
-      "Math and reasoning problems",
-      "Multi-language support"
-    ],
-    pros: [
-      "Excellent reasoning capabilities",
-      "Very safe and helpful responses",
-      "Great for complex analysis tasks",
-      "Strong coding abilities",
-      "Large context window"
-    ],
-    cons: [
-      "Limited free tier usage",
-      "Can be overly cautious sometimes",
-      "No image generation capabilities",
-      "Subscription required for heavy usage"
-    ],
+    screenshots: ["/api/placeholder/800/600", "/api/placeholder/800/600", "/api/placeholder/800/600"],
+    features: ["Advanced text generation and analysis", "Code writing and debugging", "Document analysis and summarization", "Creative writing assistance", "Math and reasoning problems", "Multi-language support"],
+    pros: ["Excellent reasoning capabilities", "Very safe and helpful responses", "Great for complex analysis tasks", "Strong coding abilities", "Large context window"],
+    cons: ["Limited free tier usage", "Can be overly cautious sometimes", "No image generation capabilities", "Subscription required for heavy usage"],
     platforms: ["Web", "iOS", "Android"],
     founded: "2021",
     teamSize: "100-500",
     alternatives: ["ChatGPT", "Gemini", "Perplexity"]
+  },
+  "figma": {
+    id: "figma",
+    title: "Figma",
+    description: "Collaborative design platform for UI/UX design, prototyping, and team collaboration",
+    longDescription: "Figma is a web-based design tool that enables teams to collaborate in real-time on interface design projects. It combines the accessibility of web-based tools with the power of desktop applications, making it the go-to choice for UI/UX designers, product teams, and developers worldwide.",
+    category: "Design & Creative",
+    rating: 4.8,
+    reviewCount: 5234,
+    pricing: "freemium",
+    website: "https://figma.com",
+    screenshots: ["/api/placeholder/800/600", "/api/placeholder/800/600", "/api/placeholder/800/600"],
+    features: ["Real-time collaboration", "Vector graphics editing", "Prototyping and animations", "Design systems and components", "Developer handoff tools", "Version control and history"],
+    pros: ["Excellent collaboration features", "Web-based accessibility", "Powerful design systems", "Great developer handoff", "Active community and plugins"],
+    cons: ["Requires internet connection", "Limited offline capabilities", "Can be slow with large files", "Learning curve for advanced features"],
+    platforms: ["Web", "Desktop", "iOS", "Android"],
+    founded: "2016",
+    teamSize: "500-1000",
+    alternatives: ["Adobe XD", "Sketch", "InVision"]
+  },
+  "ahrefs": {
+    id: "ahrefs",
+    title: "Ahrefs",
+    description: "Comprehensive SEO toolset for keyword research, backlink analysis, and competitor insights",
+    longDescription: "Ahrefs is a comprehensive SEO toolset that helps marketers and website owners improve their search engine rankings. With one of the largest backlink databases and powerful keyword research tools, Ahrefs provides actionable insights for SEO strategy, content marketing, and competitive analysis.",
+    category: "Marketing & SEO",
+    rating: 4.7,
+    reviewCount: 3156,
+    pricing: "paid",
+    website: "https://ahrefs.com",
+    screenshots: ["/api/placeholder/800/600", "/api/placeholder/800/600", "/api/placeholder/800/600"],
+    features: ["Backlink analysis", "Keyword research", "Competitor analysis", "Site audit", "Rank tracking", "Content gap analysis"],
+    pros: ["Largest backlink database", "Accurate keyword data", "Comprehensive competitor insights", "User-friendly interface", "Regular database updates"],
+    cons: ["Expensive pricing", "Steep learning curve", "No free plan", "Limited social media features"],
+    platforms: ["Web"],
+    founded: "2010",
+    teamSize: "100-500",
+    alternatives: ["SEMrush", "Moz", "SpyFu"]
+  },
+  "notion": {
+    id: "notion",
+    title: "Notion",
+    description: "All-in-one workspace for notes, docs, databases, and project management",
+    longDescription: "Notion is an all-in-one workspace that combines notes, docs, databases, and project management tools. It's designed to be a single platform where teams and individuals can organize their work, collaborate on projects, and build custom workflows that fit their specific needs.",
+    category: "Productivity",
+    rating: 4.6,
+    reviewCount: 8932,
+    pricing: "freemium",
+    website: "https://notion.so",
+    screenshots: ["/api/placeholder/800/600", "/api/placeholder/800/600", "/api/placeholder/800/600"],
+    features: ["Block-based editing", "Database and spreadsheets", "Templates and automation", "Team collaboration", "API integrations", "Cross-platform sync"],
+    pros: ["Highly customizable", "Great for team collaboration", "Powerful database features", "Excellent templates", "Strong community"],
+    cons: ["Can be overwhelming for beginners", "Performance issues with large databases", "Limited offline capabilities", "Complex for simple note-taking"],
+    platforms: ["Web", "Desktop", "iOS", "Android"],
+    founded: "2016",
+    teamSize: "100-500",
+    alternatives: ["Obsidian", "Roam Research", "Coda"]
+  },
+  "canva-pro": {
+    id: "canva-pro",
+    title: "Canva Pro",
+    description: "Easy-to-use design platform with templates, stock photos, and brand management",
+    longDescription: "Canva Pro is the premium version of the popular design platform that makes graphic design accessible to everyone. With professional templates, stock photography, brand kits, and team collaboration features, it's perfect for businesses and individuals who need to create professional designs quickly.",
+    category: "Design & Creative",
+    rating: 4.5,
+    reviewCount: 12456,
+    pricing: "freemium",
+    website: "https://canva.com",
+    screenshots: ["/api/placeholder/800/600", "/api/placeholder/800/600", "/api/placeholder/800/600"],
+    features: ["Drag-and-drop design", "Professional templates", "Brand kit management", "Stock photo library", "Team collaboration", "Social media scheduling"],
+    pros: ["User-friendly interface", "Extensive template library", "Great for social media", "Affordable pricing", "Regular feature updates"],
+    cons: ["Limited advanced design features", "Can feel restrictive for pros", "Internet connection required", "Template-based approach"],
+    platforms: ["Web", "iOS", "Android"],
+    founded: "2013",
+    teamSize: "1000+",
+    alternatives: ["Adobe Creative Suite", "Figma", "Sketch"]
+  },
+  "1password": {
+    id: "1password",
+    title: "1Password",
+    description: "Advanced password manager with secure vaults, team sharing, and breach monitoring",
+    longDescription: "1Password is a comprehensive password manager that helps individuals and teams secure their digital lives. With advanced encryption, secure sharing, and breach monitoring, it provides enterprise-grade security while maintaining ease of use for everyday password management.",
+    category: "Security & Privacy",
+    rating: 4.8,
+    reviewCount: 1876,
+    pricing: "paid",
+    website: "https://1password.com",
+    screenshots: ["/api/placeholder/800/600", "/api/placeholder/800/600", "/api/placeholder/800/600"],
+    features: ["Password generation", "Secure vaults", "Team sharing", "Breach monitoring", "Two-factor authentication", "Cross-platform sync"],
+    pros: ["Excellent security", "User-friendly interface", "Great team features", "Strong encryption", "Regular security audits"],
+    cons: ["No free plan", "Subscription-based pricing", "Learning curve for teams", "Limited free features"],
+    platforms: ["Web", "Desktop", "iOS", "Android"],
+    founded: "2005",
+    teamSize: "100-500",
+    alternatives: ["LastPass", "Bitwarden", "Dashlane"]
   }
 };
 
