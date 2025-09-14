@@ -19,7 +19,10 @@ export function CategoryCard({ title, description, icon: Icon, toolCount, trendi
   const slug = getSlugFromTitle(title);
   
   return (
-    <Link to={`/category/${slug}`}>
+    <Link 
+      to={`/category/${slug}`}
+      aria-label={`Browse ${title} software tools`}
+    >
       <Card className="group cursor-pointer transition-smooth hover:shadow-elevation hover:-translate-y-1 border-border/50 bg-secondary/30 backdrop-blur-sm">
         <CardContent className="p-6">
           <div className="flex items-start justify-between mb-4">

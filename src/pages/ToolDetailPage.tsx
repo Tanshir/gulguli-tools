@@ -177,7 +177,7 @@ const ToolDetailPage = () => {
   }[tool.pricing];
 
   return (
-    <div className="min-h-screen">
+    <main className="min-h-screen">
       {/* Header Section */}
       <section className="py-12 bg-secondary/20">
         <div className="container mx-auto px-4">
@@ -204,9 +204,9 @@ const ToolDetailPage = () => {
                       <div className="flex items-center gap-1 text-muted-foreground">
                         <Users className="w-4 h-4" />
                         <span>{Math.floor(tool.reviewCount * 2.5)}+ users</span>
-                      </div>
                     </div>
                   </div>
+                </div>
                 </div>
               </div>
               
@@ -239,8 +239,8 @@ const ToolDetailPage = () => {
                       </div>
                     </div>
                   </CardContent>
-                </Card>
-              </div>
+                  </Card>
+                </div>
             </div>
           </div>
         </div>
@@ -357,7 +357,7 @@ const ToolDetailPage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

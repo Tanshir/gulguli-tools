@@ -24,9 +24,9 @@ export function HeroSection() {
           </Badge>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6 gradient-primary bg-clip-text text-transparent">
-            The All-in-One
+            Discover the Best
             <br />
-            Software Directory
+            Software Tools on GulGuli
           </h1>
           
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">

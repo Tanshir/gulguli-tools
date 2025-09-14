@@ -312,7 +312,7 @@ const CategoryPage = () => {
   const Icon = category.icon;
 
   return (
-    <div className="min-h-screen">
+    <main className="min-h-screen">
       {/* Header Section */}
       <section className="py-16 bg-secondary/20">
         <div className="container mx-auto px-4">
@@ -374,7 +374,7 @@ const CategoryPage = () => {
           )}
         </div>
       </section>
-    </div>
+    </main>
   );
 };
 

@@ -134,20 +134,37 @@ const featuredSoftware = [
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
-      <HeroSection />
+    <>
+      {/* JSON-LD for Homepage */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "GulGuli",
+          "description": "Find, compare & review 1000+ software tools on GulGuli. Browse AI, marketing, design & productivity solutions with expert reviews and ratings.",
+          "url": "https://gulguli.com",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://gulguli.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        })}
+      </script>
       
-      {/* Categories Section */}
-      <section className="py-20 container mx-auto px-4">
-        <div className="text-center mb-12">
+      <main className="min-h-screen">
+        <HeroSection />
+        
+        {/* Categories Section */}
+        <section className="py-20 container mx-auto px-4" aria-labelledby="categories-heading">
+        <header className="text-center mb-12">
           <Badge variant="secondary" className="mb-4 bg-accent/10 text-accent border-accent/20">
             Browse by Category
           </Badge>
-          <h2 className="text-4xl font-bold mb-4">Find Tools by Category</h2>
+          <h2 id="categories-heading" className="text-4xl font-bold mb-4">Find Tools by Category</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Explore our curated categories to find the perfect software for your specific needs
           </p>
-        </div>
+        </header>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {categories.map((category, index) => (
@@ -157,19 +174,19 @@ const Index = () => {
       </section>
 
       {/* Featured Software Section */}
-      <section className="py-20 bg-secondary/20">
+      <section className="py-20 bg-secondary/20" aria-labelledby="featured-heading">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between mb-12">
-            <div>
+            <header>
               <Badge variant="secondary" className="mb-4 bg-primary/10 text-primary border-primary/20">
                 <Star className="w-4 h-4 mr-2" />
                 Featured & Trending
               </Badge>
-              <h2 className="text-4xl font-bold mb-4">Popular Software Tools</h2>
+              <h2 id="featured-heading" className="text-4xl font-bold mb-4">Popular Software Tools</h2>
               <p className="text-xl text-muted-foreground">
                 Discover the most loved and trending tools in the community
               </p>
-            </div>
+            </header>
             <Button variant="outline" className="hidden md:flex">
               View All
               <ArrowRight className="w-4 h-4 ml-2" />
@@ -192,9 +209,9 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 container mx-auto px-4 text-center">
+      <section className="py-20 container mx-auto px-4 text-center" aria-labelledby="cta-heading">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl font-bold mb-6">
+          <h2 id="cta-heading" className="text-4xl font-bold mb-6">
             Can't find what you're looking for?
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
@@ -210,7 +227,8 @@ const Index = () => {
           </div>
         </div>
       </section>
-    </div>
+      </main>
+    </>
   );
 };
 
