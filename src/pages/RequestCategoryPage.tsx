@@ -234,7 +234,7 @@ const RequestCategoryPage = () => {
                     <div className="flex items-center space-x-2">
                       <Checkbox id="updates" />
                       <Label htmlFor="updates" className="text-sm">
-                        Notify me about new categories and features on SoftHub.
+                        Notify me about new categories and features on GulGuli.
                       </Label>
                     </div>
 

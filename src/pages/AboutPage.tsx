@@ -70,13 +70,13 @@ const AboutPage = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-6 bg-primary/10 text-primary border-primary/20">
-              About SoftHub
+              About GulGuli
             </Badge>
             <h1 className="text-5xl font-bold mb-6">
               Helping developers discover the <span className="text-primary">perfect tools</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              SoftHub is the most comprehensive directory of software tools, built by the developer community to help you find, compare, and choose the right tools for your projects.
+              GulGuli is the most comprehensive directory of software tools, built by the developer community to help you find, compare, and choose the right tools for your projects.
             </p>
           </div>
         </div>
@@ -115,16 +115,16 @@ const AboutPage = () => {
 
             <Card className="mb-12">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-4">Why SoftHub Exists</h3>
+                <h3 className="text-2xl font-bold mb-4">Why GulGuli Exists</h3>
                 <div className="prose prose-lg max-w-none text-muted-foreground">
                   <p className="mb-4">
                     In 2023, we noticed a problem: developers and creators were spending countless hours researching tools, jumping between review sites, and struggling to find reliable information about software solutions. The landscape was fragmented, biased, and often outdated.
                   </p>
                   <p className="mb-4">
-                    We built SoftHub to solve this. Our platform brings together comprehensive tool information, real user reviews, and expert curation in one place. Whether you're a solo developer looking for the perfect code editor or a startup founder building your tech stack, SoftHub helps you make informed decisions quickly.
+                    We built GulGuli to solve this. Our platform brings together comprehensive tool information, real user reviews, and expert curation in one place. Whether you're a solo developer looking for the perfect code editor or a startup founder building your tech stack, GulGuli helps you make informed decisions quickly.
                   </p>
                   <p>
-                    Today, SoftHub serves over 50,000 developers and creators worldwide, helping them discover tools that boost productivity, enhance creativity, and drive business growth.
+                    Today, GulGuli serves over 50,000 developers and creators worldwide, helping them discover tools that boost productivity, enhance creativity, and drive business growth.
                   </p>
                 </div>
               </CardContent>
@@ -140,7 +140,7 @@ const AboutPage = () => {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Our Values</h2>
               <p className="text-lg text-muted-foreground">
-                The principles that guide everything we do at SoftHub.
+                The principles that guide everything we do at GulGuli.
               </p>
             </div>
 
@@ -175,7 +175,7 @@ const AboutPage = () => {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Meet the Team</h2>
               <p className="text-lg text-muted-foreground">
-                The passionate individuals behind SoftHub's mission.
+                The passionate individuals behind GulGuli's mission.
               </p>
             </div>
 

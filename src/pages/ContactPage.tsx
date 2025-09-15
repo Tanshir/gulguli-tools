@@ -69,7 +69,7 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <p className="font-medium">Email</p>
-                      <p className="text-sm text-muted-foreground">hello@softhub.dev</p>
+                      <p className="text-sm text-muted-foreground">hello@gulguli.com</p>
                     </div>
                   </div>
                   
@@ -136,7 +136,7 @@ const ContactPage = () => {
                   <div className="flex items-start gap-3">
                     <MapPin className="w-5 h-5 text-primary mt-1" />
                     <div>
-                      <p className="font-medium">SoftHub HQ</p>
+                      <p className="font-medium">GulGuli HQ</p>
                       <p className="text-sm text-muted-foreground">
                         123 Tech Street<br />
                         San Francisco, CA 94105<br />

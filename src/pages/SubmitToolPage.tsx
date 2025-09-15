@@ -302,7 +302,7 @@ const SubmitToolPage = () => {
                   <div className="flex items-center space-x-2">
                     <Checkbox id="updates" />
                     <Label htmlFor="updates" className="text-sm">
-                      Send me updates about new tools and features on SoftHub.
+                      Send me updates about new tools and features on GulGuli.
                     </Label>
                   </div>
 
