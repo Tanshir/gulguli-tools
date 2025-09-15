@@ -35,67 +35,67 @@ export function SoftwareCard({
 }: SoftwareCardProps) {
   const toolSlug = slug || getSlugFromTitle(title);
   const pricingColor = {
-    free: "tech-green",
-    freemium: "tech-orange", 
-    paid: "tech-purple"
+    free: "accent-green",
+    freemium: "accent-orange", 
+    paid: "accent-purple"
   }[pricing];
 
   return (
-    <Card className="group cursor-pointer transition-smooth hover:shadow-elevation hover:-translate-y-1 border-border/50 bg-card/80 backdrop-blur-sm">
-      <CardContent className="p-6">
-        <div className="flex items-start justify-between mb-4">
-          <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center text-white font-bold text-lg">
+    <Card className="group cursor-pointer transition-smooth hover:shadow-elevation border hover:border-primary/20">
+      <CardContent className="p-8">
+        <div className="flex items-start justify-between mb-6">
+          <div className="flex items-center gap-4">
+            <div className="w-16 h-16 rounded-xl bg-primary text-primary-foreground flex items-center justify-center font-bold text-xl">
               {logo || title[0]}
             </div>
             <div>
-              <h3 className="text-lg font-semibold group-hover:text-primary transition-smooth">{title}</h3>
-              <Badge variant="outline" className="text-xs mt-1">
+              <h3 className="text-xl font-bold group-hover:text-primary transition-smooth mb-1">{title}</h3>
+              <Badge variant="outline" className="text-sm font-medium">
                 {category}
               </Badge>
             </div>
           </div>
           <div className="flex flex-col items-end gap-2">
             {trending && (
-              <Badge variant="secondary" className="bg-tech-orange/20 text-tech-orange border-tech-orange/30">
+              <Badge variant="outline" className="bg-accent-orange/10 text-accent-orange border-accent-orange/30 font-medium">
                 <TrendingUp className="w-3 h-3 mr-1" />
                 Trending
               </Badge>
             )}
             {featured && (
-              <Badge variant="secondary" className="bg-tech-purple/20 text-tech-purple border-tech-purple/30">
+              <Badge variant="outline" className="bg-accent-purple/10 text-accent-purple border-accent-purple/30 font-medium">
                 Featured
               </Badge>
             )}
           </div>
         </div>
 
-        <p className="text-sm text-muted-foreground mb-4 line-clamp-2">{description}</p>
+        <p className="text-muted-foreground mb-6 leading-relaxed">{description}</p>
 
-        <div className="flex items-center justify-between mb-4">
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-1">
-              <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-              <span className="text-sm font-medium">{rating}</span>
-              <span className="text-xs text-muted-foreground">({reviewCount})</span>
+        <div className="flex items-center justify-between mb-6">
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-2">
+              <Star className="w-5 h-5 fill-accent-orange text-accent-orange" />
+              <span className="font-bold">{rating}</span>
+              <span className="text-sm text-muted-foreground">({reviewCount})</span>
             </div>
-            <div className="flex items-center gap-1 text-muted-foreground">
-              <Users className="w-4 h-4" />
-              <span className="text-xs">{Math.floor(reviewCount * 2.5)}+ users</span>
+            <div className="flex items-center gap-2 text-muted-foreground">
+              <Users className="w-5 h-5" />
+              <span className="text-sm font-medium">{Math.floor(reviewCount * 2.5)}+ users</span>
             </div>
           </div>
           <Badge 
             variant="outline" 
-            className={`text-${pricingColor} border-${pricingColor}/30 bg-${pricingColor}/10`}
+            className={`text-${pricingColor} border-${pricingColor}/30 bg-${pricingColor}/10 font-medium`}
           >
             {pricing === "freemium" ? "Free + Paid" : pricing.charAt(0).toUpperCase() + pricing.slice(1)}
           </Badge>
         </div>
 
         <Link to={`/tool/${toolSlug}`}>
-          <Button variant="ghost" className="w-full justify-between group-hover:bg-primary/10 transition-smooth">
+          <Button variant="outline" className="w-full justify-between font-medium group-hover:bg-primary group-hover:text-primary-foreground transition-smooth">
             View Details
-            <ExternalLink className="w-4 h-4" />
+            <ExternalLink className="w-5 h-5" />
           </Button>
         </Link>
       </CardContent>
