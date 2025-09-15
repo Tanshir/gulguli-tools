@@ -93,6 +93,12 @@ export function Header() {
                 </NavigationMenuItem>
                 
                 <NavigationMenuItem>
+                  <Link to="/blog" className="text-sm font-medium transition-colors hover:text-primary">
+                    Blog
+                  </Link>
+                </NavigationMenuItem>
+                
+                <NavigationMenuItem>
                   <Link to="/browse" className="text-sm font-medium transition-colors hover:text-primary">
                     Browse All
                   </Link>
@@ -148,6 +154,13 @@ export function Header() {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Trending
+                </Link>
+                <Link
+                  to="/blog"
+                  className="block px-3 py-2 text-sm font-medium rounded-md hover:bg-accent"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Blog
                 </Link>
                 <Link
                   to="/browse"
